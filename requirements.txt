@@ -2,4 +2,3 @@ flask
 Werkzeug
 line-bot-sdk
 requests
-json
