@@ -12,6 +12,7 @@ class ChatGPT:
     def __init__(self):
         self.prompt = Prompt()
         self.model = "gpt-4-1106-preview"
+        self.model_url = "https://chatapi.onechat.fun/v1/chat/completions"
         self.temperature = 0.7
         self.max_tokens = 500
 
@@ -24,7 +25,7 @@ class ChatGPT:
             "temperature": self.temperature,
             "max_tokens": self.max_tokens
         }
-        response = requests.post(self.model,
+        response = requests.post(self.model_url,
                                 headers=headers,
                                 json=pload,
                                 stream=True)
